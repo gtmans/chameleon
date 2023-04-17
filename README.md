@@ -7,7 +7,7 @@ I am trying to transfer this project from Arduino Nano to ATTiny85. At first I e
 
 I tried this:
 
-wrote a i2c scanner (see *4.5.ino) that displays the found address binairy on the led strip but it finds nothing
+wrote a i2c scanner (see *4.8.ino) that displays the found address binairy on the led strip but it finds nothing
 checked the ATTiny is running at 16MHz : Yes
 Wire.setClock() to set the I2C clock speed to 100kHz and 10kHz, which should be compatible with the ATTiny85.
 two pullups of 10k to sda and scl
