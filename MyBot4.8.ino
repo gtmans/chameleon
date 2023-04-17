@@ -4,10 +4,11 @@
 // ATTiny85 running at 16MHz(PLL) and burned bootloader 
 
 #define  Tiny         1           // if defined compile for ATTiny85 io. Arduino
-#define  Use_TinyWire 0           // if defined uses TiniWireM.h io. Wire.h 
+#define  Use_TinyWire 1           // if defined uses TiniWireM.h io. Wire.h 
 
 #ifdef   Use_TinyWire
   #include <TinyWireM.h>          // I2C Master lib for ATTinys which use USI
+//#include <USI_TWI_Master.h>
 #else
 //#include <Wire.h>
 #endif
@@ -43,6 +44,8 @@ void setup() {
 
   #if defined(__AVR_ATtiny85__) && (F_CPU == 16000000)
     clock_prescale_set(clock_div_1);
+//  USI_TWI_Master::init();
+//  TinyWireM::USI_TWI_Master twi;
     #ifndef   Use_TinyWire
 //    Wire.setClock(100000);  // set I2C clock speed to 100kHz
       Wire.setClock(10000);   // set I2C clock speed to 100kHz
@@ -126,7 +129,9 @@ void displayAddresses() {
   #endif
   
   #ifdef   Use_TinyWire
-    TinyWireM.begin();
+  //const uint32_t TWI_SPEED = 100000UL; // desired clock speed
+  //TinyWireM.begin(TWI_SPEED); // set I2C clock frequency to 100 kHz does not work
+    TinyWireM.begin(); 
   #else
     Wire.begin();
   #endif
