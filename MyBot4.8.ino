@@ -10,7 +10,7 @@
   #include <TinyWireM.h>          // I2C Master lib for ATTinys which use USI
 //#include <USI_TWI_Master.h>
 #else
-//#include <Wire.h>
+  #include <Wire.h>
 #endif
 
 #ifdef   Tiny
