@@ -15,3 +15,5 @@ I tried this:
 - compiled succesfully with wire.h or TinyWireM.h<BR>
 
 ![fritzing](https://github.com/gtmans/chameleon/blob/main/fritzing.png)
+
+![testing](https://github.com/gtmans/chameleon/blob/main/breadboard2.jpg)
