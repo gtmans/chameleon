@@ -17,3 +17,7 @@ I tried this:
 ![fritzing](https://github.com/gtmans/chameleon/blob/main/fritzing.png)
 
 ![chameleon](https://github.com/gtmans/chameleon/blob/main/chameleon-breadboard.jpg)
+
+Finally I transferrred this project to Seeeduino Xiao which works fine!
+
+![result](https://github.com/gtmans/chameleon/blob/main/chameleon-small.png)
